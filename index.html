@@ -3,6 +3,13 @@
 
 <head>
 
+    <script type="text/javascript">
+      document.getElementById('searchform').onsubmit = function() {
+          window.location = 'http://0.0.0.0:8080/query:' + document.getElementById('test').value;
+          return false;
+      }
+      </script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -65,12 +72,12 @@
             <!--serchbar start-->
           <div class="mx-auto" style="width: 300px;">
 
-          <!-- <form class="form-inline my-2 my-lg-0" action="http://foo.com" method="post">
+            <form class="form-inline my-2 my-lg-0" action="http://0.0.0.0:8080/questions/query:document" method="get">
             <div class="row">
-                <input class="col-6 order-first form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <input class="col-6 order-first form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
                 <button class="col-4 btn btn-outline-success my-2 my-sm-0 text-white" type="submit">Search</button>
             </div>
-            </form> -->
+            </form>
 
         </div>
 
